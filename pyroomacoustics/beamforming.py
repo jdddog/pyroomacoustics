@@ -339,7 +339,7 @@ class MicrophoneArray(object):
                 import samplerate
 
                 fs_ratio = self.fs / float(fs)
-                newL = int(fs_ratio * signals.shape[1]) - 1
+                newL = int(fs_ratio * signals.shape[1])
                 self.signals = np.zeros((self.M, newL))
                 # samplerate resample function considers columns as channels
                 # (hence the transpose)
